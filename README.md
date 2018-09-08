@@ -2,7 +2,13 @@
 
  * * *
 
-[编程与设计（演讲稿）](./docs/Coding.html)   
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
 
  * * *
  
