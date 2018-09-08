@@ -12,7 +12,7 @@
 
 **Mayx 的网站**
  
-[Mayx的博客](http://mayx.my-board.org/)   
+[Mayx的博客 - Powered by WordPress](http://mayx.my-board.org/)   
 
 [Mayx的Wiki](http://mayxwiki.my-style.in/)   
 
