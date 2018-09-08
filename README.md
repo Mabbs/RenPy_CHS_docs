@@ -2,21 +2,25 @@
 
  * * *
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
+{% for category in site.categories %}
+  <h3>{{ category[0] }}</h3>
+  <ul>
+    {% for post in category[1] %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        {{ post.excerpt }}
+      </li>
+    {% endfor %}
+  </ul>
+{% endfor %}
 
  * * *
  
-**其他页面** 
+<h2>其他页面</h2> 
  
  [RenPy 中文文档（镜像站）](./RenPy_Docs_CHS/RenPy/)   
 
-**Mayx 的网站**
+<h3>Mayx 的网站</h3>
  
 [Mayx的博客 - Powered by WordPress](http://mayx.my-board.org/)   
 
