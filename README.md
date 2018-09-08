@@ -8,7 +8,7 @@
  
 **其他页面** 
  
- [RenPy 中文文档](./RenPy)   
+ [RenPy 中文文档（镜像站）](./RenPy_Docs_CHS/RenPy/)   
 
 **Mayx 的网站**
  
