@@ -7,7 +7,7 @@
   <ul>
     {% for post in category[1] %}
       <li>
-        <a href="{{ post.url }}">{{ post.title }}</a>
+        <a class="itemarticle-tips" href="{{ post.url }}">{{ post.title }}</a>
         {{ post.excerpt }}
       </li>
     {% endfor %}
