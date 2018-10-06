@@ -1,7 +1,3 @@
----
-paginate_path: "page:num"
----
-
 # 首页 - 我的文章
 
  * * *
