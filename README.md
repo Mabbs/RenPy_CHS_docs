@@ -16,6 +16,8 @@
 
  * * *
  
+ <input name="live2dBGM" value="https://m10.music.126.net/20181007014443/7a2cd96753c9f7e35cd0505d36df56fc/ymusic/1cb7/04f3/02b4/9699485be519c9a5d503741ad5b20e17.mp3" type="hidden">
+ 
 <h2>其他页面</h2> 
  
  [RenPy 中文文档（镜像站）](./RenPy_Docs_CHS/RenPy/)   
