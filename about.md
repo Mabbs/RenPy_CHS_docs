@@ -6,11 +6,9 @@ layout: default
 
  * * *
 
-待编辑……
-
 <table border="0" style="float: right; width: 260px; font-size: 90%; margin: 1em 0 1em 1em; background: #f9f9f9; border: 1px #999999 solid; border-collapse: collapse; clear: right;" cellpadding="0" cellspacing="0">
 <tbody><tr>
-<td colspan="2" align="center" id="userAvatar"><img src="{{site.logo | relative_url}}" alt="Logo">
+<td colspan="2" align="center" id="userAvatar"><img src="{{site.logo | relative_url}}" height="120px" alt="Logo">
 </td></tr>
 <tr>
 <td colspan="2" align="center" bgcolor="#66CCFF"><b>基本资料</b>
@@ -63,7 +61,10 @@ layout: default
 <tr>
 <th>所属团体
 </th>
-<td align="center">~~Mayx Inc.~~
+<td align="center"> 
+  
+  ~~Mayx Inc.~~
+  
 </td></tr>
 <tr>
 <td colspan="2" align="center" bgcolor="#E0FFFF">
@@ -71,3 +72,7 @@ layout: default
 <tr>
 <td colspan="2" style="padding: 5px;">
 </td></tr></tbody></table>
+
+
+待编辑……
+
