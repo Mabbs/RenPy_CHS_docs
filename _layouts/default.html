@@ -7,7 +7,9 @@
 
 {% seo %}
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <!--[if gte IE 9]><-->
     <link rel="stylesheet" href="/Live2dHistoire/live2d/css/live2d.css" />
+    <![endif]-->
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -44,6 +46,7 @@
       <section>
 
       {{ content }}
+      <!--[if gte IE 9]><-->
 <div id="landlord" style="left:5px;bottom:0px;">
     <div class="message" style="opacity:0"></div>
     <canvas id="live2d" width="500" height="560" class="live2d"></canvas>
@@ -69,6 +72,7 @@
     </div>
 </div>
 <div id="open_live2d">召唤伊斯特瓦尔</div>
+    <![endif]-->
       </section>
       <footer>
         {% if site.github.is_project_page %}
@@ -88,6 +92,7 @@
       ga('send', 'pageview');
     </script>
     {% endif %}
+<!--[if gte IE 9]><-->
 <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
 <script>
 var message_Path = '/Live2dHistoire/live2d/';//资源目录，如果目录不对请更改
@@ -95,5 +100,6 @@ var talkAPI = "";//如果有类似图灵机器人的聊天接口请填写接口�
 </script>
 <script type="text/javascript" src="/Live2dHistoire/live2d/js/live2d.js"></script>
 <script type="text/javascript" src="/Live2dHistoire/live2d/js/message.js"></script>
+<![endif]-->
   </body>
 </html>
