@@ -1,4 +1,6 @@
 ---
+layout: default
+title: 首页 - 我的文章
 paginate_path: "page:num"
 ---
 
@@ -15,7 +17,7 @@ paginate_path: "page:num"
     <span class="date">{{ post.date }}</span>
   </p>
   <div class="content">
-    {{ post.content }}
+    {{ post.excerpt }} 
   </div>
   </td></tr>
 {% endfor %}
