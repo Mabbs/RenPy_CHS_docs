@@ -14,7 +14,7 @@ paginate_path: "page:num"
   <tr><td>
   <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
   <p class="author">
-    <span class="date">{{ post.date }}</span>
+    <span class="date">{{ page.date | date: "%-d %B %Y" }}</span>
   </p>
   <div class="content">
     {{ post.excerpt }} 
