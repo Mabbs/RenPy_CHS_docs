@@ -15,9 +15,6 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
 <style type="text/css">
-.live_ico_box{
- outline=0;
-}
 .backToTop {
  display: none;
  width: 18px;
@@ -84,7 +81,7 @@
         </div>
     </div>
     <input name="live_talk" id="live_talk" value="1" type="hidden" />
-    <div class="live_ico_box" tabindex="1">
+    <div class="live_ico_box">
     	<div class="live_ico_item type_info" id="showInfoBtn"></div>
     	<div class="live_ico_item type_talk" id="showTalkBtn"></div>
         <div class="live_ico_item type_music" id="musicButton"></div>
@@ -144,11 +141,11 @@ var talkAPI = "";//如果有类似图灵机器人的聊天接口请填写接口�
 <script type="text/javascript" src="/Live2dHistoire/live2d/js/message.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-  $("div#landlord").focus(function(){
-    $("div.live_ico_box").css("display","block");
+  $("div#landlord").mouseover(function(){
+    $("div.live_ico_box").fadeIn();
   });
-  $("div#landlord").blur(function(){
-    $("div.live_ico_box").css("display","none");
+  $("div#landlord").mouseout(function(){
+    $("div.live_ico_box").fadeOut();
   });
 });
 </script>
