@@ -99,7 +99,17 @@
         {% if site.github.is_project_page %}
         <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
         {% endif %}
-        <p><small>Made by Mayx</small></p>
+        <p><small>Made by Mayx - 总字数：{% assign count = 0 %}
+{% for post in site.posts %}
+    {% assign single_count = post.content | strip_html | strip_newlines | remove: " " | size %}
+    {% assign count = count | plus: single_count %}
+{% endfor %}
+
+{% if count > 10000 %}
+    {{ count | divided_by: 10000 }} 万 {{ count | modulo: 10000 }}
+{% else %}
+    {{ count }}
+{% endif %}</small></p>
       </footer>
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
