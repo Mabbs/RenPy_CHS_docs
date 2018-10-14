@@ -13,7 +13,7 @@ layout: default
   <small>tags: <em>{{ page.tags | join: "</em> - <em>" }}</em></small>
 {% endif %}
 
-<!--[if gte IE 9]><-->
+<!--[if !IE]> -->
 <link rel="stylesheet" href="/gitalk/dist/gitalk.css">
 <script src="/gitalk/dist/gitalk.min.js"></script>
 
@@ -32,4 +32,4 @@ var gitalk = new Gitalk({
 
 gitalk.render('gitalk-container')
 </script>
-<![endif]-->
+<!-- <![endif]-->
