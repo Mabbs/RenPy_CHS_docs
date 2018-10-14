@@ -8,9 +8,9 @@
 {% seo %}
     <link title="Mayx的博客" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="alternate" type="application/rss+xml">
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-    <!--[if gte IE 9]><-->
+    <!--[if !IE]> -->
     <link rel="stylesheet" href="/Live2dHistoire/live2d/css/live2d.css" />
-    <![endif]-->
+    <!-- <![endif]-->
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -67,7 +67,7 @@
       <section>
 
       {{ content }}
-      <!--[if gte IE 9]><-->
+      <!--[if !IE]> -->
 <div id="landlord" style="left:5px;bottom:0px;">
     <div class="message" style="opacity:0"></div>
     <canvas id="live2d" width="500" height="560" class="live2d"></canvas>
@@ -93,7 +93,7 @@
     </div>
 </div>
 <div id="open_live2d">召唤伊斯特瓦尔</div>
-    <![endif]-->
+    <!-- <![endif]-->
       </section>
       <footer>
         {% if site.github.is_project_page %}
@@ -142,7 +142,7 @@
     $(function() { $backToTopFun(); });
 })();
 </script>
-<!--[if gte IE 9]><-->
+<!--[if !IE]> -->
 <script>
 var message_Path = '/Live2dHistoire/live2d/';//资源目录，如果目录不对请更改
 var talkAPI = "";//如果有类似图灵机器人的聊天接口请填写接口路径
@@ -164,6 +164,6 @@ $(document).ready(function(){
   });
 });
 </script>
-<![endif]-->
+<!-- <![endif]-->
   </body>
 </html>
