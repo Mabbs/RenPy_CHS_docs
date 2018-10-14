@@ -81,7 +81,7 @@
         </div>
     </div>
     <input name="live_talk" id="live_talk" value="1" type="hidden" />
-    <div class="live_ico_box">
+    <div class="live_ico_box" style="display:none;">
     	<div class="live_ico_item type_info" id="showInfoBtn"></div>
     	<div class="live_ico_item type_talk" id="showTalkBtn"></div>
         <div class="live_ico_item type_music" id="musicButton"></div>
@@ -145,15 +145,10 @@
 <!--[if !IE]> -->
 <script>
 var message_Path = '/Live2dHistoire/live2d/';//资源目录，如果目录不对请更改
-var talkAPI = "http://www.tuling123.com/openapi/api";//如果有类似图灵机器人的聊天接口请填写接口路径
+var talkAPI = "https://yuri.gear.host/talk.php";//如果有类似图灵机器人的聊天接口请填写接口路径
 </script>
 <script type="text/javascript" src="/Live2dHistoire/live2d/js/live2d.js"></script>
 <script type="text/javascript" src="/Live2dHistoire/live2d/js/message.js"></script>
-<style type="text/css">
-.live_ico_box {
-display: none
-}
-</style>
 <script type="text/javascript">
 $(document).ready(function(){
   $("div#landlord").mouseenter(function(){
