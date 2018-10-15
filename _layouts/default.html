@@ -106,7 +106,7 @@
     }
     $(function() {
         var Counter = AV.Object.extend("Counter");
-        if (window.location.pathname !== '/') {
+        if (window.location.pathname !== '/' && $('.leancloud_visitors').length == 1) {
             // in post.html, so add 1 to hit counts
             addCount(Counter);
         } else if ($('.post-link').length > 0){
