@@ -4,3 +4,8 @@ logo: https://avatars0.githubusercontent.com/u/17966333
 author: mayx
 excerpt_separator: <!--more-->
 paginate: 5
+leancloud:
+  enable: true
+  app_id: 0sF5pKqo9g6tbKcUyNOLyMy9-gzGzoHsz
+  app_key: 4n88LYh73w7ksw9eHHdf8Foj
+  
