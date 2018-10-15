@@ -9,7 +9,7 @@ paginate_path: "page:num"
 <hr />
 
 <!-- 遍历分页后的文章 -->
-<table class="leancloud_visitors post-link">
+<table>
 {% for post in paginator.posts %}
   <tr><td>
   <h2><a class="post-link" href="{{ post.url }}">{{ post.title }}</a></h2>
