@@ -3,7 +3,7 @@ layout: default
 ---
 
 <small>{{ page.date | date: "%-d %B %Y" }} - 字数统计：{{ page.content | strip_html | strip_newlines | remove: " " | size }} - 阅读大约需要{{ page.content | strip_html | strip_newlines | remove: " " | size | divided_by: 350 | plus: 1 }}分钟
-{% if site.leancloud.enable %} <span id="{{ page.url }}" class="leancloud_visitors" data-flag-title="{{ page.title }}"> <span class="post-meta-divider"> - </span> <span class="post-meta-item-text"> Hits: </span> <span class="leancloud-visitors-count"></span> </span> {% endif %}
+{% if site.leancloud.enable %} <span id="{{ page.url }}" class="leancloud_visitors" data-flag-title="{{ page.title }}"> <span class="post-meta-divider"> - </span> <span class="post-meta-item-text"> Hits: </span> <span class="leancloud-visitors-count"></span>Loading</span> {% endif %}
 </small>
 <h1>{{ page.title }}</h1>
 
