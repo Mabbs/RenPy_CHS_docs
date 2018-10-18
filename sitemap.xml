@@ -13,7 +13,7 @@
 
   {% for post in site.posts %}
   <url>
-    <loc>{{ post.url | absolute_url }}/</loc>
+    <loc>{{ post.url | absolute_url }}</loc>
     <lastmod>{{ post.date | date: "%Y-%m-%d" }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.2</priority>
