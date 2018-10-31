@@ -11,6 +11,5 @@ leancloud:
 plugins:
   - jekyll-sitemap
   - jekyll-feed
-  - jekyll-readme-index
 feed:
   path: atom.xml
