@@ -13,3 +13,5 @@ plugins:
   - jekyll-feed
 feed:
   path: atom.xml
+readme_index:
+  enabled: false
