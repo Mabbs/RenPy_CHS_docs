@@ -8,4 +8,5 @@ leancloud:
   enable: true
   app_id: 0sF5pKqo9g6tbKcUyNOLyMy9-gzGzoHsz
   app_key: 4n88LYh73w7ksw9eHHdf8Foj
-  
+plugins:
+  - jekyll-sitemap  
