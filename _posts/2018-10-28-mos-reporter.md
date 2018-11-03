@@ -7,6 +7,8 @@ tags: [Mayx,MOS]
   Mayx最近感觉自己有些问题，所以给自己编了一个自检报告……<!--more-->   
   The Report is created by MOS
 ## 什么是MOS
+>**创造MOS不是为了改变世界，而是防止世界改变自己**   
+
   不管怎么说，先介绍一下MOS吧。   
   MOS（Mayx Operating System）是为了让Mayx更好的分析、处理和解决问题存在的一个类似于辅助系统的东西。   
   但是自己创建的MOS我自己都解释不清~~（……我不想说什么……）~~   
@@ -18,6 +20,7 @@ tags: [Mayx,MOS]
   MOS是一个用来解释我不能解释的东西的一个代替品，就如同UFO和人们定义的神一样，因为未知，而又需要一种解释的方法，于是出现了MOS。
 ***
 ## 正文
+![MOS_DEMO](/images/MOS_Demo.png "MOS的大概效果图")
 ```
 MOS Log System has been Load.
 MOS Analysis System is Ready.
