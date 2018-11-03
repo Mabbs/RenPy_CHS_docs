@@ -217,7 +217,7 @@
     {{ count | divided_by: 10000 }} 万 {{ count | modulo: 10000 }}
 {% else %}
     {{ count }}
-          {% endif %}<a href="{{ "/atom.xml" | prepend: site.baseurl | prepend: site.url }}" >RSS</a></small></p>
+          {% endif %} - <a href="{{ "/atom.xml" | prepend: site.baseurl | prepend: site.url }}" >Atom</a></small></p>
       </footer>
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
