@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 {% seo %}
-    <link title="Mayx的博客" href="{{ "/atom.xml" | prepend: site.baseurl | prepend: site.url }}" rel="alternate" type="application/rss+xml">
+{% feed_meta %}
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
     <!--[if !IE]> -->
     <link rel="stylesheet" href="/Live2dHistoire/live2d/css/live2d.css" />
@@ -217,7 +217,7 @@
     {{ count | divided_by: 10000 }} 万 {{ count | modulo: 10000 }}
 {% else %}
     {{ count }}
-{% endif %}</small></p>
+          {% endif %}<a href="{{ "/atom.xml" | prepend: site.baseurl | prepend: site.url }}" >RSS</a></small></p>
       </footer>
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
