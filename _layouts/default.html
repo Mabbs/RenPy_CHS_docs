@@ -265,6 +265,11 @@ $(document).ready(function(){
     $("div.live_ico_box").fadeOut();
   });
 });
+var ab=new Date();
+var hours = ab.getHours();
+if( hours > 22 || hours <= 7 ){
+ $("body").css("background-color","black");
+}
 </script>
 <div class="cb-search-tool" style="position: fixed; top: 0px ; bottom: 0px; left: 0px; right:  0px;
       opacity: 0.95; background-color: #111111; z-index: 9999; display: none;">
