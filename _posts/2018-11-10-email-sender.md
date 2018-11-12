@@ -53,6 +53,53 @@ function xh_get(){
         $retdata=curl_post_https($url,$data);
         return $retdata;//返回json
 }
+function xw_get(){
+//RSS源地址列表数组 
+$rssfeed = array("http://www.people.com.cn/rss/it.xml"); 
+ 
+for($i=0;$i<sizeof($rssfeed);$i++){//分解开始 
+    $buff = ""; 
+    $rss_str=""; 
+    //打开rss地址，并读取，读取失败则中止 
+    $fp = fopen($rssfeed[$i],"r") or die("can not open $rssfeed");  
+    while ( !feof($fp) ) { 
+        $buff .= fgets($fp,4096); 
+    } 
+    //关闭文件打开 
+    fclose($fp); 
+ 
+    //建立一个 XML 解析器 
+    $parser = xml_parser_create(); 
+    //xml_parser_set_option -- 为指定 XML 解析进行选项设置 
+    xml_parser_set_option($parser,XML_OPTION_SKIP_WHITE,1); 
+    //xml_parse_into_struct -- 将 XML 数据解析到数组$values中 
+    xml_parse_into_struct($parser,$buff,$values,$idx); 
+    //xml_parser_free -- 释放指定的 XML 解析器 
+    xml_parser_free($parser); 
+    foreach ($values as $val) { 
+        $tag = $val["tag"]; 
+        $type = $val["type"]; 
+        $value = $val["value"]; 
+        //标签统一转为小写 
+        $tag = strtolower($tag); 
+ 
+        if ($tag == "item" && $type == "open"){ 
+            $is_item = 1; 
+        }else if ($tag == "item" && $type == "close") { 
+            //构造输出字符串 
+            $rss_str .= "<a href='".$link."' target=_blank>".$title."</a><br />"; 
+            $is_item = 0; 
+        } 
+        //仅读取item标签中的内容 
+        if($is_item==1){ 
+            if ($tag == "title") {$title = $value;}         
+            if ($tag == "link") {$link = $value;} 
+        } 
+    } 
+    //输出结果 
+    return $rss_str."<br />"; 
+} 
+}
 $to = "mayx@outlook.com";
 $subject = "Mayx日报";
 $txt = "
@@ -60,7 +107,7 @@ $txt = "
 <body>
 <h1>Mayx日报</h1><hr>Hi,今天是" . date("Y-m-d") . "，以下是今天的日报：<br><small>
 " . file_get_contents("http://mappi.000webhostapp.com/hitokoto/") . "</small>
-<h2>天气预报</h2>" . w_get() . "<h2>每日笑话</h2>" . xh_get() . "<hr><small>" . file_get_contents("https://api.gushi.ci/all.txt") . "</small><br><center>Made By <a href=\"https://mabbs.github.io\">Mayx</a></center>
+<h2>天气预报</h2>" . w_get() . "<h2>每日笑话</h2>" . xh_get() . "<h2>今日新闻</h2>" . xw_get() . "<hr><small>" . file_get_contents("https://api.gushi.ci/all.txt") . "</small><br><center>Made By <a href=\"https://mabbs.github.io\">Mayx</a></center>
 </body>
 </html>
 ";
@@ -71,6 +118,7 @@ $headers = "MIME-Version: 1.0" . "\r\n" .
 mail($to,$subject,$txt,$headers);
 ?>
 ```
+（2018.11.12更新：增加了今日新闻）
 
 # 后记
   说实话，我更擅长用Linux Shell解决这种问题，可惜网上好像没有免费的云主机，听说Travis-ci好像也能搞这个事情，但是说实话，我英语并不是很好，让我看懂短一点的文档还可以，太长的就算了……   
