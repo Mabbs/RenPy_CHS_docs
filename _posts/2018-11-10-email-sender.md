@@ -37,12 +37,12 @@ function curl_post_https($url,$data){ // 模拟提交数据函数
 }
 function w_get(){
         $url = 'https://yuri.gear.host/talk.php';
-        $data['info']       = '银川天气';
+        $data['info']       = '某地天气';
         $data['userid']      = 'Mayx_Mail';
         $retdata=curl_post_https($url,$data);
-        $data['info']       = '银川明天天气';
+        $data['info']       = '某地明天天气';
         $retdata = $retdata . "<br>" .curl_post_https($url,$data);
-        $data['info']       = '银川后天天气';
+        $data['info']       = '某地后天天气';
         $retdata=$retdata . "<br>" .curl_post_https($url,$data);
         return $retdata;//返回json
 }
