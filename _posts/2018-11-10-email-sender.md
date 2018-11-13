@@ -37,12 +37,12 @@ function curl_post_https($url,$data){ // 模拟提交数据函数
 }
 function w_get(){
         $url = 'https://yuri.gear.host/talk.php';
-        $data['info']       = '某地天气';
+        $data['info']       = '银川天气';
         $data['userid']      = 'Mayx_Mail';
         $retdata=curl_post_https($url,$data);
-        $data['info']       = '某地明天天气';
+        $data['info']       = '银川明天天气';
         $retdata = $retdata . "<br>" .curl_post_https($url,$data);
-        $data['info']       = '某地后天天气';
+        $data['info']       = '银川后天天气';
         $retdata=$retdata . "<br>" .curl_post_https($url,$data);
         return $retdata;//返回json
 }
@@ -76,6 +76,7 @@ for($i=0;$i<sizeof($rssfeed);$i++){//分解开始
     xml_parse_into_struct($parser,$buff,$values,$idx); 
     //xml_parser_free -- 释放指定的 XML 解析器 
     xml_parser_free($parser); 
+    $j = 0;
     foreach ($values as $val) { 
         $tag = $val["tag"]; 
         $type = $val["type"]; 
@@ -88,6 +89,7 @@ for($i=0;$i<sizeof($rssfeed);$i++){//分解开始
         }else if ($tag == "item" && $type == "close") { 
             //构造输出字符串 
             $rss_str .= "<a href='".$link."' target=_blank>".$title."</a><br />"; 
+            $j++;
             $is_item = 0; 
         } 
         //仅读取item标签中的内容 
@@ -95,12 +97,15 @@ for($i=0;$i<sizeof($rssfeed);$i++){//分解开始
             if ($tag == "title") {$title = $value;}         
             if ($tag == "link") {$link = $value;} 
         } 
+    if($j == 20){
+        break;
+    }
     } 
     //输出结果 
     return $rss_str."<br />"; 
 } 
 }
-$to = "mayx@outlook.com";
+$to = "mayx@outlook.com , unmayx@139.com";
 $subject = "Mayx日报";
 $txt = "
 <html>
@@ -119,6 +124,7 @@ mail($to,$subject,$txt,$headers);
 ?>
 ```
 （2018.11.12更新：增加了今日新闻）
+（2018.11.13更新：限制新闻条数为前20条）
 
 # 后记
   说实话，我更擅长用Linux Shell解决这种问题，可惜网上好像没有免费的云主机，听说Travis-ci好像也能搞这个事情，但是说实话，我英语并不是很好，让我看懂短一点的文档还可以，太长的就算了……   
