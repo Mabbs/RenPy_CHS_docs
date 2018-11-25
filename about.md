@@ -22,4 +22,6 @@ layout: default
  
  Phone Number: 15209678869
  
- Email: mayx@outlook.com
+ Email: <mayx@outlook.com>
+ 
+ [About.me](https://about.me/mayx)
