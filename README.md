@@ -1,4 +1,4 @@
-# Mayx的博客
+# Mayx的博客（本博客不再更新 This blog is no longer updated）
 Mayx's Home Page   
 Powered by [Jekyll](https://github.com/jekyll/jekyll)
 
