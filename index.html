@@ -10,6 +10,7 @@ title: 首页 - 我的文章
 <!-- 遍历分页后的文章 -->
 <table>
 {% for post in paginator.posts %}
+  <a class="post-link" href="{{ post.url }}">
   <tr><td>
   <h2><a class="post-link" href="{{ post.url }}">{{ post.title }}</a></h2>
   <p class="author">
@@ -20,6 +21,7 @@ title: 首页 - 我的文章
     {{ post.excerpt | strip_html | strip_newlines }} 
   </div>
   </td></tr>
+  </a>
 {% endfor %}
 </table>
 {% if paginator.total_pages > 1 %}
@@ -54,8 +56,6 @@ title: 首页 - 我的文章
  
  <a href="/RenPy_Docs_CHS/RenPy/">RenPy 中文文档（镜像站）</a><br>
 
- <a href="/Terminus/">端点星计划（镜像站）</a><br>
-
  <a href="/message.html">留言板</a><br>
 
 <br>
@@ -63,8 +63,4 @@ title: 首页 - 我的文章
 
 <a href="https://mayx.tk/">Mayx日报</a><br>
 
-<a href="https://unmayx.wordpress.com/">Mayx的博客 - Hosting on WordPress</a><br>
-
 <a href="https://yuri.gear.host/">Mayx的API</a><br>
-
-<a href="http://mayx.3vcm.net/">Mayx的论坛 - Powered by js10</a><br>
