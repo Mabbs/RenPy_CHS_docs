@@ -10,8 +10,8 @@ title: 首页 - 我的文章
 <!-- 遍历分页后的文章 -->
 <table>
 {% for post in paginator.posts %}
-  <tr><td onclick="location='{{ post.url }}'" class="post-link">
-    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  <tr><td onclick="location='{{ post.url }}'">
+    <h2><a class="post-link" href="{{ post.url }}">{{ post.title }}</a></h2>
   <p class="author">
     <span class="date">{{ post.date | date: "%-d %B %Y" }}</span>
     {% if site.leancloud.enable %} <!--[if !IE]> --> <span id="{{ post.url }}" class="leancloud_visitors" data-flag-title="{{ post.title }}"> <span class="post-meta-divider">|</span> <span class="post-meta-item-text"> Hits: </span> <span class="leancloud-visitors-count"></span> </span> <!-- <![endif]--> {% endif %}
