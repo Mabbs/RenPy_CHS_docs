@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>Unlimited git.io</title>
+    <meta charset='utf-8' />
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+    <link href="//git.io/stylesheets/site.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="//git.io/javascripts/modernizr.js" type="text/javascript"></script>
+    <script src="//git.io/javascripts/modernizr-tests.js" type="text/javascript"></script>
+    <!--[if (gte IE 6)&(lte IE 8)]>
+      <script src="//git.io/javascripts/selectivizr-min.js" type="text/javascript"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id='container'>
+      <div id='bar'>
+        <span id="error" class='arrow_box'>
+          Sorry yo. That's an invalid URL.
+        </span>
+        <div class='side' id='front'>
+          <form action="//yuri.gear.host/gitio.php" method="post">
+            <h1 class="logo"><a href="https://git.io/">Git.io</a></h1>
+            <input id="input-url" placeholder="Enter a URL to shorten..." type="text" />
+            <button>Shorten</button>
+          </form>
+        </div>
+        <div class='side' id='back'>
+          <h1 class="logo"><a href="https://git.io/">Git.io</a></h1>
+          <input id="output-url" readonly type="text" />
+          <button id="copy-button">Copy</button>
+          <span id='copied-msg'>Copied!</span>
+          <a id="restart" href="#">Shorten another URL</a>
+        </div>
+      </div>
+      <footer>
+        <a href="https://github.com/site/terms">Terms of Service</a>
+        <a href="https://github.com/site/privacy">Privacy</a>
+        <a href="https://github.com/security">Security</a>
+        <a href="https://mabbs.github.io/">Mayx Blog</a>
+        <a href="https://github.com" class="invertocat">
+          <img src="//git.io/images/invertocat.png" width="24" height="24" />
+        </a>
+        &copy; <span id="year">2019</span> GitHub Inc. All rights reserved.
+      </footer>
+    </div>
+  </body>
+  <script src="//git.io/javascripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+  <script src="//git.io/javascripts/ZeroClipboard.js" type="text/javascript"></script>
+  <script src="//git.io/javascripts/jquery.defaultvalue.js" type="text/javascript"></script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+  GitIO.init();
+  var currentYear = (new Date).getFullYear();
+  $("#year").text( currentYear );
+/*
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '4f919d1df5a1f504b3000026');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+*/
+});
+
+var GitIO = {
+  url: 'https://git.io',
+  clipboard: '',
+
+  init: function() {
+    GitIO.initBrowserFallbacks();
+    GitIO.initClipboard();
+    GitIO.observeFormSubmissions();
+    GitIO.observeRestarts();
+  },
+
+  initBrowserFallbacks: function() {
+    if (!Modernizr.input.placeholder) {
+      $('input[placeholder]').each(function(input) {
+        $(this).defaultValue($(this).attr('placeholder'), 'active', 'inactive');
+      });
+    }
+  },
+
+  initClipboard: function() {
+    ZeroClipboard.config({ forceHandCursor: true, moviePath: '//git.io/flash/ZeroClipboard.swf' });
+    GitIO.clipboard = new ZeroClipboard($('#copy-button'));
+
+    GitIO.clipboard.on('load', function (client) {
+
+      GitIO.clipboard.on('mouseover', function (client) {
+        $('#copy-button').addClass('hover');
+      });
+
+      GitIO.clipboard.on( 'datarequested', function(client) {
+        GitIO.clipboard.setText($('#output-url').val());
+        $('#copy-button').addClass('active');
+        $('#copied-msg').show();
+      });
+
+      GitIO.clipboard.on( 'complete', function(client, args) {
+        $('#copy-button').removeClass('active');
+      });
+    })
+  },
+
+  observeFormSubmissions: function() {
+    $('form').submit(function(e) {
+      var form = $(e.target)
+      e.preventDefault();
+
+      $.ajax(
+        { type: form.attr('method')
+        , url: form.attr('action')
+        , data:
+          { url: $('#input-url').val()
+          }
+        , success: function(data) {
+            var outputURL = GitIO.url + "/" + data;
+            $('#output-url').val(outputURL).select();
+            $('#input-url').removeClass('error');
+            $('.arrow_box').hide();
+            $('#bar').addClass('flipped');
+          }
+        , error: function(xhr, ajaxOptions, thrownError) {
+            $('#error').text(xhr.responseText)
+            $('#input-url').addClass('error');
+            $('.arrow_box').show();
+          }
+        }
+      )
+    });
+  },
+
+  observeRestarts: function() {
+    $('a#restart').click(function(e) {
+      e.preventDefault();
+      $('#input-url').val('').focus();
+      $('#output-url').val('');
+      $('#copied-msg').hide();
+      $('#bar').removeClass('flipped');
+    });
+  }
+};
+    GitIO.url = "https://git.io";
+  </script>
+</html>
