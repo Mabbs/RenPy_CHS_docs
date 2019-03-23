@@ -210,7 +210,9 @@
     {{ count | divided_by: 10000 }} 万 {{ count | modulo: 10000 }}
 {% else %}
     {{ count }}
-          {% endif %} - <a href="{{ "/atom.xml" | relative_url }}" >Atom</a></small></p>
+          {% endif %} - 文章数：{% for post in site.posts %}
+              {% assign co = co | plus: 1 %}
+          {% endfor %}{{ co }} - <a href="{{ "/atom.xml" | relative_url }}" >Atom</a></small></p>
       </footer>
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
@@ -258,11 +260,6 @@ $(document).ready(function(){
     $("div.live_ico_box").fadeOut();
   });
 });
-var ab=new Date();
-var hours = ab.getHours();
-if( hours > 19 || hours <= 7 ){
- $("body").css("background-color","black");
-}
 </script>
 <div class="cb-search-tool" style="position: fixed; top: 0px ; bottom: 0px; left: 0px; right:  0px;
       opacity: 0.95; background-color: #111111; z-index: 9999; display: none;">
