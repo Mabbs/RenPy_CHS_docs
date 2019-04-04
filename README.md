@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Mayx的博客
 Mayx's Home Page   
 Powered by [Jekyll](https://github.com/jekyll/jekyll)
@@ -20,3 +24,7 @@ Powered by [Jekyll](https://github.com/jekyll/jekyll)
 [网易云音乐](https://music.163.com/)   
 [Gearhost](https://www.gearhost.com/)   
 [图灵机器人](http://www.turingapi.com/)
+
+## 版权声明
+未经作者同意，请勿转载   
+若需转载，请联系作者
