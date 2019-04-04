@@ -212,7 +212,7 @@
     {{ count }}
           {% endif %} - 文章数：{% for post in site.posts %}
               {% assign co = co | plus: 1 %}
-          {% endfor %}{{ co }} - <a href="{{ "/atom.xml" | relative_url }}" >Atom</a></small></p>
+          {% endfor %}{{ co }} - <a href="{{ "/atom.xml" | relative_url }}" >Atom</a> - <a href="{{ "/README.html" | relative_url }}" >About</a></small></p>
       </footer>
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
