@@ -8,3 +8,15 @@ Powered by [Jekyll](https://github.com/jekyll/jekyll)
 [Live2dHistoire](https://github.com/eeg1412/Live2dHistoire)   
 [minimal](https://github.com/pages-themes/minimal)   
 [jekyll-search](https://github.com/androiddevelop/jekyll-search)
+
+## 使用的网络资源
+[Github](https://github.com/) | 包含:
+- Issue
+- Pages
+- Git
+- [Git.io](https://git.io/)
+
+[LeanCloud](https://leancloud.cn/)   
+[网易云音乐](https://music.163.com/)   
+[Gearhost](https://www.gearhost.com/)   
+[图灵机器人](http://www.turingapi.com/)
