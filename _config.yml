@@ -13,3 +13,4 @@ plugins:
   - jekyll-feed
 feed:
   path: atom.xml
+google_analytics: UA-137710294-1
