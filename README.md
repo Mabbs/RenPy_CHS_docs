@@ -24,6 +24,7 @@ Powered by [Jekyll](https://github.com/jekyll/jekyll)
 [网易云音乐](https://music.163.com/)   
 [Gearhost](https://www.gearhost.com/)   
 [图灵机器人](http://www.turingapi.com/)
+[一言](https://hitokoto.cn/)
 
 ## 版权声明
 未经作者同意，请勿转载   
