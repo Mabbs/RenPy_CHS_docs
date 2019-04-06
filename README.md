@@ -23,7 +23,7 @@ Powered by [Jekyll](https://github.com/jekyll/jekyll)
 [LeanCloud](https://leancloud.cn/)   
 [网易云音乐](https://music.163.com/)   
 [Gearhost](https://www.gearhost.com/)   
-[图灵机器人](http://www.turingapi.com/)
+[图灵机器人](http://www.turingapi.com/)   
 [一言](https://hitokoto.cn/)
 
 ## 版权声明
