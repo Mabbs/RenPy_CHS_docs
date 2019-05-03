@@ -32,8 +32,11 @@ Powered by [Jekyll](https://github.com/jekyll/jekyll)
 本站转载的文章如无特别说明，均按原文章的协议执行
 
 ## 打赏/赞助 Mayx
-- 通过支付宝打赏/赞助：
-![QRCode](/images/code.png "打赏赞助二维码")   
+- 通过支付宝打赏/赞助：   
+![QRCode](/images/code.png)   
+
+- 通过微信打赏/赞助：   
+![QRCode](/images/WXcode.png)    
 
 - 通过[爱发电](https://afdian.net/@unmayx)打赏/赞助   
 
