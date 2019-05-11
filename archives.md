@@ -16,7 +16,7 @@ title: Archives
 
 {% endif %} 
 
-- [{{ post.title }}]({{ post.url }})" - {{ post.date | date: "%-d %B %Y" }}   
+- [{{ post.title }}]({{ post.url }}) - {{ post.date | date: "%-d %B %Y" }}   
 
 {% if forloop.last %} 
 {% else %}
