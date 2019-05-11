@@ -28,12 +28,15 @@ Powered by [Jekyll](https://github.com/jekyll/jekyll)
 
 ## 版权声明
 未经作者同意，请勿转载   
-若需转载，请联系作者   
+若需转载，请联系作者（主要希望找人聊天~）   
 本站转载的文章如无特别说明，均按原文章的协议执行
 
 ## 打赏/赞助 Mayx
 - 通过支付宝/微信打赏/赞助：   
 ![QRCode](/images/QRCode.png)   
+
+- 通过支付宝赏金红包打赏/赞助：（注：可以直接用扫到的红包打赏/赞助哦~）   
+![HBCode](/images/HBCode.jpg)   
 
 - 通过[爱发电](https://afdian.net/@unmayx)打赏/赞助   
 
