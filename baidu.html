@@ -1,0 +1,35 @@
+<h1>Baidu Mobile URL Converter</h1><hr>
+<form action="">
+<h2 style="display:inline">Baidu URL:</h2>
+<input type="text" name="url">
+<br><br>
+<input type="submit" value="Submit">
+</form> 
+<br>
+<hr><center>By <a href="https://mabbs.github.io/">Mayx</a></center>
+
+<script type="text/javascript"> 
+function GetQueryStringOrig(name)
+{
+     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     var r = window.location.search.substr(1).match(reg);
+     if(r!=null)return  unescape(r[2]); return null;
+}
+function getQueryString(url) { 
+    if(url) { 
+        url=url.substr(url.indexOf("?")+1); 
+    } 
+    var result = {}, 
+    queryString =url || location.search.substring(1),  
+    re = /([^&=]+)=([^&]*)/g, 
+    m; 
+    while (m = re.exec(queryString)) { 
+        result[decodeURIComponent(m[1])] = decodeURIComponent(m[2]); 
+    } 
+    return result; 
+} 
+var myParam = getQueryString(GetQueryStringOrig("url")); 
+if(myParam.web_url !=null && myParam.web_url.toString().length>1){
+window.location.href=myParam.web_url; 
+}
+</script>
