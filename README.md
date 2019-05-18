@@ -32,6 +32,9 @@ Powered by [Jekyll](https://github.com/jekyll/jekyll)
 本站转载的文章如无特别说明，均按原文章的协议执行
 
 ## 打赏/赞助 Mayx
+还没干什么居然敢向各位要钱？请大家忽略本段的胡言乱语吧~
+<!--
+
 - 通过支付宝/微信打赏/赞助：   
 ![QRCode](/images/QRCode.png)   
 
@@ -42,3 +45,5 @@ Powered by [Jekyll](https://github.com/jekyll/jekyll)
 
 - 通过购买服务器赞助[花火学园](https://www.say-huahuo.com/)
 [![Vultr](https://www.vultr.com/media/banner_1.png)](https://www.vultr.com/?ref=7613026)
+
+-->
