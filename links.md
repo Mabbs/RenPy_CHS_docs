@@ -10,6 +10,7 @@ tags: [links]
 | - | - |
 | [花火学园](https://www.say-huahuo.com/) | 和谐融洽的ACG交流以及资源聚集地 |
 | [贫困的蚊子](https://qwq.moe/) | *No description* |
+| [Kiosr](https://moe.sb/) | *No description* |
 
 ## Links申请
 请在下面留言或者直接发起[Pull request](https://github.com/Mabbs/mabbs.github.io/pull/new/master)
