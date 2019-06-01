@@ -1,4 +1,3 @@
-AV.initialize("{{site.leancloud.app_id}}", "{{site.leancloud.app_key}}");
     function showHitCount(Counter) {
         var query = new AV.Query(Counter);
         var entries = [];
