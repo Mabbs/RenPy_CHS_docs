@@ -18,9 +18,9 @@
 <!-- jQuery -->
 <script src="//cdn.jsdelivr.net/npm/jquery@1.9.1/jquery.min.js"></script>
 <!--[if !IE]> -->
+<script src="//cdn.jsdelivr.net/npm/pjax@0.2.6/pjax.min.js"></script>
 <!-- Bootstrap Core JavaScript -->
-<script src="//cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js
-"></script>
+<script src="//cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
 {% if site.leancloud.enable %}
 
 <script src="//cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
@@ -165,10 +165,12 @@
         
         <a href="{{ "/about.html" | relative_url }}">About Me</a>
       </header>
-      <section>
+      <section id="pjax-alpha">
 
       {{ content }}
-      <!--[if !IE]> -->
+
+      </section>
+            <!--[if !IE]> -->
 <div id="landlord" style="left:5px;bottom:0px;">
     <div class="message" style="opacity:0"></div>
     <canvas id="live2d" width="500" height="560" class="live2d"></canvas>
@@ -195,7 +197,6 @@
 </div>
 <div id="open_live2d">召唤伊斯特瓦尔</div>
     <!-- <![endif]-->
-      </section>
       <footer>
         {% if site.github.is_project_page %}
         <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
@@ -260,6 +261,7 @@ $(document).ready(function(){
     $("div.live_ico_box").fadeOut();
   });
 });
+ $(document).pjax('a[class="post-link"]', '#pjax-alpha', {fragment:'#pjax-alpha', timeout:8000}); 
 </script>
 <div class="cb-search-tool" style="position: fixed; top: 0px ; bottom: 0px; left: 0px; right:  0px;
       opacity: 0.95; background-color: #111111; z-index: 9999; display: none;">
