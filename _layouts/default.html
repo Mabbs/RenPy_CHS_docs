@@ -134,9 +134,24 @@
 var message_Path = '/Live2dHistoire/live2d/';//资源目录，如果目录不对请更改
 var talkAPI = "https://yuri.gear.host/talk.php";//如果有类似图灵机器人的聊天接口请填写接口路径
 </script>
-<script type="text/javascript" src="/Live2dHistoire/live2d/js/live2d.js"></script>
-<script type="text/javascript" src="/Live2dHistoire/live2d/js/message.js"></script>
-<script type="text/javascript">
+<script src="/Live2dHistoire/live2d/js/live2d.js"></script>
+<script src="/Live2dHistoire/live2d/js/message.js"></script>
+<script>
+  (function() {
+    var $backToTopTxt = "返回顶部", $backToTopEle = $('<div class="backToTop"></div>').appendTo($("body"))
+        .text($backToTopTxt).attr("title", $backToTopTxt).click(function() {
+            $("html, body").animate({ scrollTop: 0 }, 120);
+    }), $backToTopFun = function() {
+        var st = $(document).scrollTop(), winh = $(window).height();
+        (st > 0)? $backToTopEle.show(): $backToTopEle.hide();
+        //IE6下的定位
+        if (!window.XMLHttpRequest) {
+            $backToTopEle.css("top", st + winh - 166);
+        }
+    };
+    $(window).bind("scroll", $backToTopFun);
+    $(function() { $backToTopFun(); });
+})();
 $(document).ready(function(){
   $("div#landlord").mouseenter(function(){
     $("div.live_ico_box").fadeIn();
