@@ -1,0 +1,122 @@
+---
+layout: default
+---
+
+<small>{{ page.date | date: "%-d %B %Y" }} - 字数统计：God Knows
+{% if site.leancloud.enable %} <!--[if !IE]> --><span id="{{ page.url }}" class="leancloud_visitors" data-flag-title="{{ page.title }}"> <span class="post-meta-divider"> - </span> <span class="post-meta-item-text"> Hits: </span> <span class="leancloud-visitors-count"></span> </span> <!-- <![endif]--> {% endif %}
+</small>
+<h1>{{ page.title }}</h1>
+
+<p class="view">by <a href="//github.com/{{ page.author | default: "Mabbs" }}">{{ page.author | default: site.author }}</a></p>
+
+<hr>
+
+<script src="/js/aes.js"></script>
+<script>
+function getByteLen(val) {
+    var len = 0;
+    for (var i = 0; i < val.length; i++) {
+        if (val[i].match(/[^\x00-\xff]/ig) != null) len += 3;
+        else len += 1;
+    }
+    return len;
+}
+
+function onbtnDecrypto() {
+    var encryptedData = "{{content}}";
+    var keyword = document.getElementById("inputkey").value;
+
+    if (keyword.replace(/(^\s*)|(\s*$)/g, "") == '') {
+        alert("请输入密码！");
+        return;
+    }
+    while (getByteLen(keyword) % 8 != 0) {
+        keyword = keyword + "\0";
+    }
+
+    var key = CryptoJS.enc.Utf8.parse(keyword);
+    var encryptedHexStr = CryptoJS.enc.Hex.parse(encryptedData);
+    var encryptedBase64Str = CryptoJS.enc.Base64.stringify(encryptedHexStr);
+
+    var decryptedData = CryptoJS.AES.decrypt(encryptedBase64Str, key, {
+        mode: CryptoJS.mode.ECB,
+        padding: CryptoJS.pad.Pkcs7
+    });
+
+    if (decryptedData.sigBytes < 0) {
+        document.getElementById("output").innerHTML = "解密失败！密文或者key错误!";
+        return;
+    }
+    try {
+        decryptedData.toString(CryptoJS.enc.Utf8)
+    } catch(e) {
+        document.getElementById("output").innerHTML = "解密失败！密文或者key错误!";
+        return;
+    }
+    var decryptedStr = decryptedData.toString(CryptoJS.enc.Utf8);
+    document.getElementById("output").innerHTML = decryptedStr;
+    document.getElementById("pwinput").style.display="none";
+}
+</script>
+<div id="pwinput">{{ page.tips | default: "请输入密码:" }}
+   <input id="inputkey" type="text" /> <button onclick="onbtnDecrypto()">解密</button>
+</div>
+<div id="output"></div>  
+
+{% if page.tags %}
+  <small>tags: <em>{{ page.tags | join: "</em> - <em>" }}</em></small>
+{% endif %}
+
+<div class="pagination">
+    {% if page.previous.url %}
+      <span class="prev" >
+          <a href="{{ site.baseurl }}{{ page.previous.url }}">
+            上一篇：{{ page.previous.title }}
+          </a>
+      </span>
+    {% endif %}
+  <br />
+    {% if page.next.url %}
+      <span class="next" >
+          <a href="{{ site.baseurl }}{{ page.next.url }}">
+            下一篇：{{ page.next.title }}
+          </a>
+      </span>
+    {% endif %}
+  </div>
+
+<!--[if !IE]> -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+if (window.location.host != "mabbs.github.io")
+{
+var gitalk = new Gitalk({
+  clientID: '098934a2556425f19d6e',
+  clientSecret: '0bd44eed8425e5437ce43c4ba9b2791fbc04581d',
+  repo: 'mabbs.github.io',
+  owner: 'Mabbs',
+  admin: ['Mabbs'],
+  id: '{{ page.id }}',      // Ensure uniqueness and length less than 50
+  distractionFreeMode: false  // Facebook-like distraction free mode
+})
+}
+else
+{
+var gitalk = new Gitalk({
+  clientID: '36557aec4c3cb04f7ac6',
+  clientSecret: 'ac32993299751cb5a9ba81cf2b171cca65879cdb',
+  repo: 'mabbs.github.io',
+  owner: 'Mabbs',
+  admin: ['Mabbs'],
+  id: '{{ page.id }}',      // Ensure uniqueness and length less than 50
+  distractionFreeMode: false  // Facebook-like distraction free mode
+})
+}
+
+gitalk.render('gitalk-container')
+</script>
+<!-- <![endif]-->
