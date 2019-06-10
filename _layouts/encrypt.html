@@ -55,11 +55,11 @@ function onbtnDecrypto() {
     }
     var decryptedStr = decryptedData.toString(CryptoJS.enc.Utf8);
     document.getElementById("output").innerHTML = decryptedStr;
-    document.getElementById("pwinput").style.display="none";
+    document.getElementById("pwinput").style.display = "none";
 }
 </script>
 <div id="pwinput">{{ page.tips | default: "请输入密码:" }}<br />
-   <input id="inputkey" type="text" /> <button onclick="onbtnDecrypto()">解密</button>
+   <input id="inputkey" type="password" /> <button onclick="onbtnDecrypto()">解密</button>
 </div>
 <div id="output"></div>  <br />
 
