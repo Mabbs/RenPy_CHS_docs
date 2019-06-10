@@ -23,7 +23,7 @@ function getByteLen(val) {
 }
 
 function onbtnDecrypto() {
-    var encryptedData = "{{content}}";
+    var encryptedData = "{{ content  | strip_html | strip_newlines }}";
     var keyword = document.getElementById("inputkey").value;
 
     if (keyword.replace(/(^\s*)|(\s*$)/g, "") == '') {
@@ -61,7 +61,7 @@ function onbtnDecrypto() {
 <div id="pwinput">{{ page.tips | default: "请输入密码:" }}
    <input id="inputkey" type="text" /> <button onclick="onbtnDecrypto()">解密</button>
 </div>
-<div id="output"></div>  
+<div id="output"></div>  <br />
 
 {% if page.tags %}
   <small>tags: <em>{{ page.tags | join: "</em> - <em>" }}</em></small>
