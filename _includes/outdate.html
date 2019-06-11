@@ -1,6 +1,7 @@
 <div id="outdate" style="display:none;">
 <hr />
 这是一个创建于 <span id="outime"></span> 天前的文章，其中的信息可能已经有所发展或是发生改变。
+<br /><br />
 </div>
 <script>
 BirthDay = new Date("{{ page.date | date: "%m/%d/%Y" }} 00:00:00");
@@ -14,4 +15,3 @@ if (daysold > 90) {
     document.getElementById("outime").innerHTML = daysold;
 }
 </script>
-<br /><br />
