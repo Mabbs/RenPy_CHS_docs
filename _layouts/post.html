@@ -8,7 +8,7 @@ layout: default
 <h1>{{ page.title }}</h1>
 
 <p class="view">by <a href="//github.com/{{ page.author | default: "Mabbs" }}">{{ page.author | default: site.author }}</a></p>
-{{ include outdate.html }}
+{% include outdate.html %}
 <hr />
 
 {% include toc.html html=content sanitize=true %}
