@@ -15,11 +15,24 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
     
+{% if site.google_analytics %}    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{ site.google_analytics }}');
+</script>
+{% endif %}
+    
 <!-- jQuery -->
 <script src="//cdn.jsdelivr.net/npm/jquery@1.9.1/jquery.min.js"></script>
 <script src="//cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
-<script>AV.initialize("{{site.leancloud.app_id}}", "{{site.leancloud.app_key}}");</script>
+<!--[if !IE]> -->
 <script>
+AV.initialize("{{site.leancloud.app_id}}", "{{site.leancloud.app_key}}");
     function showHitCount(Counter) {
         var query = new AV.Query(Counter);
         var entries = [];
@@ -115,11 +128,10 @@
         }
     });
 </script>
-<!--[if !IE]> -->
 <!-- Bootstrap Core JavaScript -->
 <script src="//cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
 <!-- <![endif]-->
-<style type="text/css">
+<style>
 .backToTop {
  display: none;
  width: 18px;
@@ -166,7 +178,7 @@
       {{ content }}
 
       </section>
-            <!--[if !IE]> -->
+<!--[if !IE]> -->
 <div id="landlord" style="left:5px;bottom:0px;">
     <div class="message" style="opacity:0"></div>
     <canvas id="live2d" width="500" height="560" class="live2d"></canvas>
@@ -213,24 +225,8 @@
       </footer>
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
-    {% if site.google_analytics %}
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      ga('create', '{{ site.google_analytics }}', 'auto');
-      ga('send', 'pageview');
-    </script>
-    {% endif %}
 
 <!--[if !IE]> -->
-<script>
-var message_Path = '/Live2dHistoire/live2d/';//资源目录，如果目录不对请更改
-var talkAPI = "https://yuri.gear.host/talk.php";//如果有类似图灵机器人的聊天接口请填写接口路径
-</script>
-<script src="/Live2dHistoire/live2d/js/live2d.js"></script>
-<script src="/Live2dHistoire/live2d/js/message.js"></script>
 <script>
   (function() {
     var $backToTopTxt = "返回顶部", $backToTopEle = $('<div class="backToTop"></div>').appendTo($("body"))
@@ -255,7 +251,12 @@ $(document).ready(function(){
     $("div.live_ico_box").fadeOut();
   });
 });
+
+var message_Path = '/Live2dHistoire/live2d/';
+var talkAPI = "https://yuri.gear.host/talk.php";
 </script>
+<script src="/Live2dHistoire/live2d/js/live2d.js"></script>
+<script src="/Live2dHistoire/live2d/js/message.js"></script>
 <div class="cb-search-tool" style="position: fixed; top: 0px ; bottom: 0px; left: 0px; right:  0px;
       opacity: 0.95; background-color: #111111; z-index: 9999; display: none;">
     <input type="text" class="form-control cb-search-content" id="cb-search-content" style="position: fixed; top: 60px" placeholder="文章标题 标签" >
