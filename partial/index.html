@@ -2,6 +2,8 @@
 paginate: 1
 paginate_path: "/partial/:num/"
 ---
+{{ paginator.page }}
+{{ paginator.total_posts }}
 {% for post in paginator.posts %}
 {{ post.content }}
 {% endfor %}
