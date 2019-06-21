@@ -37,6 +37,7 @@ for (var i = 0;i<visitors.length;i++) {
 }
 }
 $(function (){
+$.ajaxSettings.async = false; 
     if (window.location.pathname !== '/' && $('.visitors').length == 1) {
         
         // in post.html, so add 1 to hit counts
@@ -45,6 +46,7 @@ $(function (){
         // in index.html, there are many 'leancloud_visitors' and 'post-link', so just show hit counts.
         showHitCount();
     }
+$.ajaxSettings.async = true; 
 });
 
 var message_Path = '/Live2dHistoire/live2d/';
