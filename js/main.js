@@ -30,6 +30,7 @@ function showHitCount() {
             }
         });
     }
+    showHitS();
 }
 function addCount() {
 var visitors=document.getElementsByClassName("visitors");
