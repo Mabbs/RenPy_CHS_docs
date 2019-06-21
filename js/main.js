@@ -34,8 +34,8 @@ function showHitCount() {
 }
 function addCount() {
 var visitors=document.getElementsByClassName("visitors");
-    $.get("https://yuri.gear.host/counter.php?action=add&id="+visitors[1].id,function(data){
-        visitors[1].innerHTML=data;
+    $.get("https://yuri.gear.host/counter.php?action=add&id="+visitors[0].id,function(data){
+        visitors[0].innerHTML=data;
     });
 }
 $(function (){
