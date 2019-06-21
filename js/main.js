@@ -1,5 +1,3 @@
----
----
 (function() {
     var $backToTopTxt = "返回顶部", $backToTopEle = $('<div class="backToTop"></div>').appendTo($("body"))
         .text($backToTopTxt).attr("title", $backToTopTxt).click(function() {
@@ -30,16 +28,13 @@ for (var i = 0;i<visitors.length;i++) {
 }
 function addCount() {
 var visitors=document.getElementsByClassName("visitors");
-for (var i = 0;i<visitors.length;i++) {
     $.get("https://yuri.gear.host/counter.php?action=add&id="+visitors[i].id,function(data){
         visitors[i].innerHTML=data;
     });
 }
-}
 $(function (){
 $.ajaxSettings.async = false; 
     if (window.location.pathname !== '/' && $('.visitors').length == 1) {
-        
         // in post.html, so add 1 to hit counts
         addCount();
     } else if ($('.post-link').length > 0){
