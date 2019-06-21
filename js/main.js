@@ -20,7 +20,7 @@ $(document).ready(function(){
   });
 });
 
-function showHitCount(Counter) {
+function showHitCount() {
 var visitors=document.getElementsByClassName("visitors");
 for (var i = 0;i<visitors.length;i++) {
     $.get("https://yuri.gear.host/counter.php?action=show&id="+visitors[i].id,function(data){
@@ -28,7 +28,7 @@ for (var i = 0;i<visitors.length;i++) {
     });
 }
 }
-function addCount(Counter) {
+function addCount() {
 var visitors=document.getElementsByClassName("visitors");
 for (var i = 0;i<visitors.length;i++) {
     $.get("https://yuri.gear.host/counter.php?action=add&id="+visitors[i].id,function(data){
@@ -36,15 +36,16 @@ for (var i = 0;i<visitors.length;i++) {
     });
 }
 }
-      $(function (){
-        if (window.location.pathname !== '/' && $('.visitors').length == 1) {
-            // in post.html, so add 1 to hit counts
-            addCount(Counter);
-        } else if ($('.post-link').length > 0){
-            // in index.html, there are many 'leancloud_visitors' and 'post-link', so just show hit counts.
-            showHitCount(Counter);
-        }
-      });
+$(function (){
+    if (window.location.pathname !== '/' && $('.visitors').length == 1) {
+        
+        // in post.html, so add 1 to hit counts
+        addCount();
+    } else if ($('.post-link').length > 0){
+        // in index.html, there are many 'leancloud_visitors' and 'post-link', so just show hit counts.
+        showHitCount();
+    }
+});
 
 var message_Path = '/Live2dHistoire/live2d/';
 var talkAPI = "https://yuri.gear.host/talk.php";
