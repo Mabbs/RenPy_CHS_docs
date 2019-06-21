@@ -34,8 +34,8 @@ function showHitCount() {
 }
 function addCount() {
 var visitors=document.getElementsByClassName("visitors");
-    $.get("https://yuri.gear.host/counter.php?action=add&id="+visitors[i].id,function(data){
-        visitors[i].innerHTML=data;
+    $.get("https://yuri.gear.host/counter.php?action=add&id="+visitors[1].id,function(data){
+        visitors[1].innerHTML=data;
     });
 }
 $(function (){
@@ -43,7 +43,7 @@ $(function (){
         // in post.html, so add 1 to hit counts
         addCount();
     } else if ($('.post-link').length > 0){
-        // in index.html, there are many 'leancloud_visitors' and 'post-link', so just show hit counts.
+        // in index.html, there are many 'visitors' and 'post-link', so just show hit counts.
         showHitCount();
     }
 });
