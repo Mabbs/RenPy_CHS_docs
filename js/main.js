@@ -27,12 +27,14 @@ for (var i = 0;i<visitors.length;i++) {
         visitors[i].innerHTML=data;
     });
 }
+}
 function addCount(Counter) {
 var visitors=document.getElementsByClassName("visitors");
 for (var i = 0;i<visitors.length;i++) {
     $.get("https://yuri.gear.host/counter.php?action=add&id="+visitors[i].id,function(data){
         visitors[i].innerHTML=data;
     });
+}
 }
       $(function (){
         if (window.location.pathname !== '/' && $('.visitors').length == 1) {
