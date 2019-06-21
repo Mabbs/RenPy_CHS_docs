@@ -20,7 +20,12 @@ $(document).ready(function(){
   });
 });
 
-AV.initialize("{{site.leancloud.app_id}}", "{{site.leancloud.app_key}}");
+AV.init({
+    serverURLs: 'https://avoscloud.com',
+    appId: "{{site.leancloud.app_id}}",
+    appKey: "{{site.leancloud.app_key}}"
+});
+
     function showHitCount(Counter) {
         var query = new AV.Query(Counter);
         var entries = [];
