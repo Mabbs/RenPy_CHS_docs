@@ -14,7 +14,7 @@ title: 首页 - 我的文章
     <h2><a class="post-link" href="{{ post.url }}">{{ post.title }}</a></h2>
   <p class="author">
     <span class="date">{{ post.date | date: "%-d %B %Y" }}</span>
-    <!--[if !IE]> --> | Hits: <span id="{{ post.url }}" class="visitors" >Loading...</span> <!-- <![endif]-->
+    | Hits: <span id="{{ post.url }}" class="visitors" >Loading...</span>
   </p>
   <div class="content">
     {{ post.excerpt | strip_html | strip_newlines }} 
