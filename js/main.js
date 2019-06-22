@@ -19,7 +19,7 @@ $(document).ready(function(){
 });
 
 function showHitCount() {
-    var visitors=document.getElementsByClassName("visitors");
+    var visitors=$(".visitors");
     var i = 0;
     function showHitS() {
         $.get("https://yuri.gear.host/counter.php?action=show&id="+visitors[i].id,function(data){
@@ -33,7 +33,7 @@ function showHitCount() {
     showHitS();
 }
 function addCount() {
-var visitors=document.getElementsByClassName("visitors");
+var visitors=$(".visitors");
     $.get("https://yuri.gear.host/counter.php?action=add&id="+visitors[0].id,function(data){
         visitors[0].innerHTML=Number(data);
     });
