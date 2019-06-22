@@ -23,9 +23,7 @@ function showHitCount() {
     var i = 0;
     function showHitS() {
         $.get("https://yuri.gear.host/counter.php?action=show&id="+visitors[i].id,function(data){
-            if (Number.isInteger(data)){
-            visitors[i].innerHTML=data;
-            }
+            visitors[i].innerHTML=Number(data);
             i++;
             if (i < visitors.length){
                 showHitS();
@@ -37,9 +35,7 @@ function showHitCount() {
 function addCount() {
 var visitors=document.getElementsByClassName("visitors");
     $.get("https://yuri.gear.host/counter.php?action=add&id="+visitors[0].id,function(data){
-        if (Number.isInteger(data)){
-        visitors[0].innerHTML=data;
-        }
+        visitors[0].innerHTML=Number(data);
     });
 }
 $(function (){
