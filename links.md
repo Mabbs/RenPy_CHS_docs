@@ -12,6 +12,7 @@ tags: [links]
 | [贫困的蚊子](https://qwq.moe/) | *No description* |
 | [南蛰](https://moe.sb/) | 死肥宅 |
 | [极客兔兔](https://geektutu.com) | 致力于分享有趣的技术实践 |
+| [润东小站](https://www.xiaoyingya.com/) | 一名热爱动漫AMV/MAD的14岁少年 |
 
 ## Links申请
 请在下面留言或者直接发起[Pull request](https://github.com/Mabbs/mabbs.github.io/pull/new/master)   
