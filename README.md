@@ -24,7 +24,7 @@ Powered by [Jekyll](https://github.com/jekyll/jekyll)
 [Gearhost](https://www.gearhost.com/)   
 [一言](https://hitokoto.cn/)   
 [jsDelivr](https://www.jsdelivr.com/)   
-[CDNJS](http://cdnjs.com/)
+[CDNJS](https://cdnjs.com/)
 
 ## 版权声明
 未经作者同意，请勿转载   
