@@ -38,15 +38,12 @@ var visitors=$(".visitors");
         visitors[0].innerHTML=Number(data);
     });
 }
-$(function (){
-    if (window.location.pathname !== '/' && $('.visitors').length == 1) {
-        // in post.html, so add 1 to hit counts
-        addCount();
-    } else if ($('.post-link').length > 0){
-        // in index.html, there are many 'visitors' and 'post-link', so just show hit counts.
-        showHitCount();
-    }
-});
+
+if (window.location.pathname !== '/' && $('.visitors').length == 1) {
+    addCount();
+} else if ($('.post-link').length > 0){
+    showHitCount();
+}
 
 var message_Path = '/Live2dHistoire/live2d/';
 var talkAPI = "https://yuri.gear.host/talk.php";
