@@ -38,7 +38,7 @@ var visitors=$(".visitors");
         visitors[0].innerHTML=Number(data);
     });
 }
-
+jQuery.support.cors = true;
 if (window.location.pathname !== '/' && $('.visitors').length == 1) {
     addCount();
 } else if ($('.post-link').length > 0){
