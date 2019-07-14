@@ -22,7 +22,9 @@ Powered by [Jekyll](https://github.com/jekyll/jekyll)
  
 [网易云音乐](https://music.163.com/)   
 [Gearhost](https://www.gearhost.com/)   
-[一言](https://hitokoto.cn/)
+[一言](https://hitokoto.cn/)   
+[jsDelivr](https://www.jsdelivr.com/)   
+[CDNJS](http://cdnjs.com/)
 
 ## 版权声明
 未经作者同意，请勿转载   
