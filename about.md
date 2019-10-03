@@ -25,3 +25,7 @@ layout: default
  Email: <mayx@outlook.com>
  
  [About.me](https://about.me/mayx)
+
+
+
+ <iframe src="https://www.worldcommunitygrid.org/getDynamicImage.do?memberName=Mayx&mnOn=true&stat=1&imageNum=1&rankOn=true&projectsOn=true&special=true&link=2&memberId=989431" frameborder="0" name="di" scrolling="no" width="405px" height="190px"></iframe>
