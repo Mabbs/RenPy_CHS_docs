@@ -10,7 +10,6 @@ tags: [links]
 | - | - |
 | [花火学园](https://www.say-huahuo.com/) | 和谐融洽的ACG交流以及资源聚集地 |
 | [贫困的蚊子](https://qwq.moe/) | *No description* |
-| [南蛰](https://moe.sb/) | 死肥宅 |
 | [极客兔兔](https://geektutu.com) | 致力于分享有趣的技术实践 |
 | [维基萌](https://www.wikimoe.com) | 萌即是正义！一名热爱acg的前端设计师的小站！ |
 | [JoyoBLog](https://xieboke.net) | 分享自己迈过的坎 |
