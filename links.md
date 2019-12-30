@@ -12,6 +12,7 @@ tags: [links]
 | [贫困的蚊子](https://qwq.moe/) | *No description* |
 | [极客兔兔](https://geektutu.com) | 致力于分享有趣的技术实践 |
 | [维基萌](https://www.wikimoe.com) | 萌即是正义！一名热爱acg的前端设计师的小站！ |
+| [本地磁盘小日记（No SSL）](http://ohayou.aimo.moe/) | 编码.计算机视觉.网络.语言.绘图在学/MTF/各种发烧友/死宅/不良公主w; |
 | [JoyoBLog](https://xieboke.net) | 分享自己迈过的坎 |
 
 ## Links申请
