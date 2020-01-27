@@ -14,6 +14,7 @@ tags: [links]
 | [维基萌](https://www.wikimoe.com) | 萌即是正义！一名热爱acg的前端设计师的小站！ |
 | [本地磁盘小日记（No SSL）](http://ohayou.aimo.moe/) | 编码.计算机视觉.网络.语言.绘图在学/MTF/各种发烧友/死宅/不良公主w; |
 | [JoyoBLog](https://xieboke.net) | 分享自己迈过的坎 |
+| [7gugu's blog](https://www.7gugu.com/) | 一个用来存放我爱好的地方,编程,摄影之类的空间 |
 
 ## Links申请
 请在下面留言或者直接发起[Pull request](https://github.com/Mabbs/mabbs.github.io/pull/new/master)   
