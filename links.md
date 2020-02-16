@@ -12,7 +12,6 @@ tags: [links]
 | [贫困的蚊子](https://qwq.moe/) | *No description* |
 | [极客兔兔](https://geektutu.com) | 致力于分享有趣的技术实践 |
 | [维基萌](https://www.wikimoe.com) | 萌即是正义！一名热爱acg的前端设计师的小站！ |
-| [JoyoBLog](https://xieboke.net) | 分享自己迈过的坎 |
 | [7gugu's blog](https://www.7gugu.com/) | 一个用来存放我爱好的地方,编程,摄影之类的空间 |
 
 ## Links申请
