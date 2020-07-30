@@ -32,19 +32,14 @@ Powered by [Jekyll](https://github.com/jekyll/jekyll)
 本站转载的文章如无特别说明，均按原文章的协议执行
 
 ## 打赏/赞助 Mayx
-还没干什么居然敢向各位要钱？请大家忽略本段的胡言乱语吧~
-
-<!---
 
 - 通过支付宝/微信打赏/赞助：   
 ![QRCode](/images/QRCode.png)   
 
-- 通过支付宝赏金红包打赏/赞助：（注：可以直接用扫到的红包打赏/赞助哦~）   
+- 通过支付宝赏金红包打赏/赞助：  
 ![HBCode](/images/HBCode.jpg)   
 
 - 通过[爱发电](https://afdian.net/@unmayx)打赏/赞助   
 
 - 通过购买服务器赞助[花火学园](https://www.say-huahuo.com/)
 [![Vultr](https://www.vultr.com/media/banner_1.png)](https://www.vultr.com/?ref=7613026)
-
---->
