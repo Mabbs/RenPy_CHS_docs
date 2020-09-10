@@ -31,15 +31,5 @@ Powered by [Jekyll](https://github.com/jekyll/jekyll)
 若需转载，请联系作者（主要希望找人聊天~）   
 本站转载的文章如无特别说明，均按原文章的协议执行
 
-## 打赏/赞助 Mayx
-
-- 通过支付宝/微信打赏/赞助：   
+## 打赏/赞助 Mayx 
 ![QRCode](/images/QRCode.png)   
-
-- 通过支付宝赏金红包打赏/赞助：  
-![HBCode](/images/HBCode.jpg)   
-
-- 通过[爱发电](https://afdian.net/@unmayx)打赏/赞助   
-
-- 通过购买服务器赞助[花火学园](https://www.say-huahuo.com/)
-[![Vultr](https://www.vultr.com/media/banner_1.png)](https://www.vultr.com/?ref=7613026)
