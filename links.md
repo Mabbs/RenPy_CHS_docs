@@ -9,7 +9,7 @@ tags: [links]
 | Links | Introduce |
 | - | - |
 | [花火学园](https://www.say-huahuo.com/) | 和谐融洽的ACG交流以及资源聚集地 |
-| [贫困的蚊子](https://qwq.moe/) | *No description* |
+| [贫困的蚊子](https://blog.qwq.moe/) | *No description* |
 | [极客兔兔](https://geektutu.com/) | 致力于分享有趣的技术实践 |
 | [维基萌](https://www.wikimoe.com/) | 萌即是正义！一名热爱acg的前端设计师的小站！ |
 | [星云茶馆](https://www.m78.co/) | 一个死宅的博客 |
