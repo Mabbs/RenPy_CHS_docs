@@ -11,7 +11,7 @@ title: 首页 - 我的文章
 <table>
 {% for post in paginator.posts %}
   <tr><td onclick="location='{{ post.url }}'">
-    <h2><a class="post-link" href="{{ post.url }}">{{ post.title }}</a></h2>
+    <h2><a class="post-link" href="{{ post.url }}">{{ post.title }}{% if post.layout == "encrypt" %} [加密] {% endif %}</a></h2>
   <p class="author">
     <span class="date">{{ post.date | date: "%-d %B %Y" }}</span>
     | Hits: <span id="{{ post.url }}" class="visitors" >Loading...</span>
