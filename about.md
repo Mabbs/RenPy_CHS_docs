@@ -26,4 +26,6 @@ layout: default
  
  [About.me](https://about.me/mayx)
 
+ ![WCG](https://www.seti-germany.de/wcg/badge_Mayx_0.png)
+
 <iframe src="https://www.worldcommunitygrid.org/getDynamicImage.do?memberName=Mayx&mnOn=true&stat=1&imageNum=3&rankOn=true&projectsOn=false&special=true&link=2&memberId=989431" frameborder="0" name="di" scrolling="no" width="125px" height="188px"></iframe>
