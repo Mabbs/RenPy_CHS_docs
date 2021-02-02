@@ -32,13 +32,13 @@ file_get_contents('https://api.weixin.qq.com/cgi-bin/message/template/send?acces
   要做的事情很简单，首先打开[申请页面](https://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login)，然后扫码登录，成功之后就能看到测试号管理的页面了。   
   首先看到的是appID和appsecret，这样我们就已经获得了两个参数。另外两个的话就继续往下翻，找到测试号二维码，用微信扫描关注后就会出现自己的微信号，当然这个不是真正的微信号，相当于只是一个识别码，这样第三个参数也得到了。接下来是第四个参数，，找到模板消息接口，点击新增测试模板，标题输入推送通知，或者你喜欢的啥都行，内容的话填
 ```
-{{title.DATA}}
-{{content.DATA}}
+{% raw %}{{title.DATA}}
+{{content.DATA}}{% endraw %}
 ```
   之所以这样填是为了兼容Server酱，当然也可以自己改代码然后填别的也行。不过如果不想改代码在末尾加个签名也没有问题，比如说这样：
 ```
-{{title.DATA}}
-{{content.DATA}}
+{% raw %}{{title.DATA}}
+{{content.DATA}}{% endraw %}
 --By Mayx
 ```
   这样第四个参数模板ID我们也得到了，这样上面的代码应该可以正常使用了。   
