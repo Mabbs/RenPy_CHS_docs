@@ -25,12 +25,13 @@ $title='标题';
 $content='内容';
 file_get_contents('https://api.weixin.qq.com/cgi-bin/message/template/send?access_token='.json_decode(file_get_contents('https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid='.$appid.'&secret='.$secret),true)[access_token], false, stream_context_create(array('http' => array('method'=>'post','header'=>"Content-Type: application/json;charset=utf-8",'content'=>'{"touser":"'.$userid.'","template_id":"'.$template_id.'","data":{"title": {"value":"'.$title.'"},"content": {"value":"'.$content.'"}}}'))));
 ```
-  写好之后测试了一下，效果还不错，和Server酱测试号的效果几乎一模一样，除了没有能点开的网页，当然要想搞也行，很简单，就插一个URL就可以了，如果你希望整些更多的特效，也可以去[模板接口文档](https://mp.weixin.qq.com/debug/cgi-bin/readtmpl?t=tmplmsg/faq_tmpl)里面看。    
+  写好之后测试了一下，效果还不错，和Server酱测试号的效果几乎一模一样，除了没有能点开的网页，当然要想搞也行，很简单，就插一个URL就可以了，如果你希望整些更多的特效，也可以去[模板接口文档](https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Template_Message_Interface.html)里面看。    
+  关于限制方面的话也要比Server酱要好，理论上我的代码每天能发送2000次，主要是因为获取access_token的接口每天只能使用2000次，不过如果能缓存access_token的话理论上每天能发送100000次，要比垃圾Server酱的1000次好得多。
   
 # 如何得到参数？
   我写的代码是兼容Server酱的，所以跟着他们的配置指南也可以直接用，不过有人可能连Server酱是啥都不知道，我也不给他们引流了，免得浪费他们珍贵的服务器资源。   
   要做的事情很简单，首先打开[申请页面](https://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login)，然后扫码登录，成功之后就能看到测试号管理的页面了。   
-  首先看到的是appID和appsecret，这样我们就已经获得了两个参数。另外两个的话就继续往下翻，找到测试号二维码，用微信扫描关注后就会出现自己的微信号，当然这个不是真正的微信号，相当于只是一个识别码，这样第三个参数也得到了。接下来是第四个参数，，找到模板消息接口，点击新增测试模板，标题输入推送通知，或者你喜欢的啥都行，内容的话填
+  首先看到的是appID和appsecret，这样我们就已经获得了两个参数。另外两个的话就继续往下翻，找到测试号二维码，用微信扫描关注后就会出现自己的微信号，当然这个不是真正的微信号，相当于只是一个识别码，这样第三个参数也得到了。接下来是第四个参数，找到模板消息接口，点击新增测试模板，标题输入推送通知，或者你喜欢的啥都行，内容的话填：
 ```
 {% raw %}{{title.DATA}}
 {{content.DATA}}{% endraw %}
