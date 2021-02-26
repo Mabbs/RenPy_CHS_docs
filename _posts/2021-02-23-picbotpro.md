@@ -20,7 +20,7 @@ tags: [微信, 图片, Pixiv, 机器人, PHP]
 $raw=json_decode(file_get_contents("https://mabbs.github.io/pixiv-index/index.json"),true);
 echo file_get_contents('https://mabbs.github.io/pixiv-index/data/'.$raw[rand(0,count($raw)-1)]);
 ```
-  虽然问题解决了，但是我发现了一个巨大的缺陷，我设计这个脚本的初心是想着它有非常多的数据供我调用，结果我发现我错了，之前没有仔细看他们的文档，现在看了才发现，我想要的图片他们也只有仅仅3361张而已，实在是太少了，而总共的图片数量也只有17285张而已……   
+  虽然问题解决了，但是我发现了一个巨大的缺陷，我设计这个脚本的初心是想着它有非常多的数据供我调用，结果我发现我错了，之前没有仔细看他们的文档，现在看了才发现，我想要的图片他们也只有仅仅3361张而已，实在是太少了，而总共的图片数量也只有17285张而已（即使那个站的数据也在以非常缓慢的速度增加）……   
   我只是懒得去别的地方找，而且因为这个API作者说那些图片都是Ta精心挑选的我才特意写了那个仓库的那些脚本，还特地学了一下Github Action…… ~~（虽然实际上是抄的那个[给开发者账号续命的](https://github.com/wangziyingwen/AutoApiSecret)那个仓库lol）~~  
   
 # 新的代码
@@ -43,8 +43,12 @@ $_SESSION['access_token']=json_decode(file_get_contents('https://api.weixin.qq.c
 if($_GET["upap"]){
 define('MULTIPART_BOUNDARY', '--------------------------'.microtime(true));
 
+$retry=3;
+while(!$picdata||$retry<=0){
 $raw=json_decode(file_get_contents("https://mabbs.github.io/pixiv-index/index.json"),true);
 $picdata=file_get_contents($source.json_decode(file_get_contents('https://mabbs.github.io/pixiv-index/data/'.$raw[rand(0,count($raw)-1)]),true)['url'], false, stream_context_create(array('http' => array('method' => 'GET','header' => "referer: https://www.pixiv.net/"))));
+$retry-=1;
+}
 
 $context = stream_context_create(array(
     'http' => array(
@@ -105,6 +109,7 @@ echo 'success';
 echo 'error';
 }
 ```
+  2021.02.26更新：似乎在库中的图片有一些是被删掉了，所以为了提高回复的成功率，增加了3次重试。
 
 # 如何使用？
   具体应该不需要我说了吧，看之前的几篇关于微信机器人的文章里面的这段就行了。这里我删掉了2个参数，又增加了2个，一个是Token，想填啥都行，只要和测试号里配置一样就行。另一个是source，那个是Pixiv的图片服务器，如果后端服务器在国外那这个就不用管了，如果在国内的话需要改成`https://i.pixiv.cat`来做反代，或者如果有其他反代服务也可以，自己用CloudFlare Worker建一个也没有问题。   
