@@ -17,14 +17,17 @@ $(document).ready(function(){
     $("div.live_ico_box").fadeOut();
   });
 });
-
+function showHitS(hits){
+    $.get("https://yuri.gear.host/counter.php?action=show&id="+hits.id,function(data){
+            hits.innerHTML=Number(data);
+        });
+}
 function showHitCount() {
     var visitors=$(".visitors-index");
     for(var i = 0; i < visitors.length; i++){
-        $.get("https://yuri.gear.host/counter.php?action=show&id="+visitors[i].id,function(data){
-            visitors[i].innerHTML=Number(data);
-        });
+        showHitS(visitors[i]);
     }
+    
 }
 function addCount() {
 var visitors=$(".visitors");
