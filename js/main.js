@@ -20,17 +20,11 @@ $(document).ready(function(){
 
 function showHitCount() {
     var visitors=$(".visitors-index");
-    var i = 0;
-    function showHitS() {
+    for(var i = 0; i < visitors.length; i++){
         $.get("https://yuri.gear.host/counter.php?action=show&id="+visitors[i].id,function(data){
             visitors[i].innerHTML=Number(data);
-            i++;
-            if (i < visitors.length){
-                showHitS();
-            }
         });
     }
-    showHitS();
 }
 function addCount() {
 var visitors=$(".visitors");
@@ -40,7 +34,7 @@ var visitors=$(".visitors");
 }
 if ($('.visitors').length == 1) {
     addCount();
-} else if ($('.visitors-index').length >= 0){
+} else if ($('.visitors-index').length > 0){
     showHitCount();
 }
 
