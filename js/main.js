@@ -19,7 +19,7 @@ $(document).ready(function(){
 });
 
 function showHitCount() {
-    var visitors=$(".visitors");
+    var visitors=$(".visitors-index");
     var i = 0;
     function showHitS() {
         $.get("https://yuri.gear.host/counter.php?action=show&id="+visitors[i].id,function(data){
@@ -38,9 +38,9 @@ var visitors=$(".visitors");
         visitors[0].innerHTML=Number(data);
     });
 }
-if (window.location.pathname !== '/' && $('.visitors').length == 1) {
+if ($('.visitors').length == 1) {
     addCount();
-} else if ($('.post-link').length > 0){
+} else if ($('.visitors-index').length >= 0){
     showHitCount();
 }
 
