@@ -9,14 +9,13 @@
     $(window).bind("scroll", $backToTopFun);
     $(function() { $backToTopFun(); });
 })();
-$(document).ready(function(){
+$(function(){
   $("div#landlord").mouseenter(function(){
     $("div.live_ico_box").fadeIn();
   });
   $("div#landlord").mouseleave(function(){
     $("div.live_ico_box").fadeOut();
   });
-});
 function showHitS(hits){
     $.get("https://yuri.gear.host/counter.php?action=show&id="+hits.id,function(data){
             hits.innerHTML=Number(data);
@@ -40,6 +39,7 @@ if ($('.visitors').length == 1) {
 } else if ($('.visitors-index').length > 0){
     showHitCount();
 }
+});
 
 var message_Path = '/Live2dHistoire/live2d/';
 var talkAPI = "https://yuri.gear.host/talk.php";
