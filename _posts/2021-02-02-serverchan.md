@@ -23,7 +23,7 @@ $userid='微信号（OpenID）';
 $template_id='模板ID';
 $title='标题';
 $content='内容';
-file_get_contents('https://api.weixin.qq.com/cgi-bin/message/template/send?access_token='.json_decode(file_get_contents('https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid='.$appid.'&secret='.$secret),true)[access_token], false, stream_context_create(array('http' => array('method'=>'post','header'=>"Content-Type: application/json;charset=utf-8",'content'=>'{"touser":"'.$userid.'","template_id":"'.$template_id.'","data":{"title": {"value":"'.$title.'"},"content": {"value":"'.$content.'"}}}'))));
+file_get_contents('https://api.weixin.qq.com/cgi-bin/message/template/send?access_token='.json_decode(file_get_contents('https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid='.$appid.'&secret='.$secret),true)['access_token'], false, stream_context_create(array('http' => array('method'=>'POST','header'=>"Content-Type: application/json;charset=utf-8",'content'=>'{"touser":"'.$userid.'","template_id":"'.$template_id.'","data":{"title": {"value":"'.$title.'"},"content": {"value":"'.$content.'"}}}'))));
 ```
   写好之后测试了一下，效果还不错，和Server酱测试号的效果几乎一模一样，除了没有能点开的网页，当然要想搞也行，很简单，就插一个URL就可以了，如果你希望整些更多的特效，也可以去[模板接口文档](https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Template_Message_Interface.html)里面看。    
   关于限制方面的话也要比Server酱要好，理论上我的代码每天能发送2000次，主要是因为获取access_token的接口每天只能使用2000次，不过如果能缓存access_token的话理论上每天能发送100000次，要比垃圾Server酱的1000次好得多。
