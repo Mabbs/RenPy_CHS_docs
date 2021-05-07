@@ -35,6 +35,17 @@ layout: default
       </span>
     {% endif %}
   </div>
+{% if site.related_posts %}
+<hr />
+<h2>相关文章</h2>
+<ol>
+{% for post in site.related_posts %}
+<li>
+<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+</li>
+{% endfor %}
+</ol>
+{% endif %}
 
 <!--[if !IE]> -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
