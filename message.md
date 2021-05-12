@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: 留言板
+date: 2018-10-14
 tags: [留言板] 
 id: message
 ---
