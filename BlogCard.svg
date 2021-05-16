@@ -81,12 +81,24 @@
     </g>
       </g>
     
-
         <g
           data-testid="main-card-body"
           transform="translate(0, 55)"
         >
-
+          
+    <g transform="translate(370, 47.5)">
+        <g class="rank-text">
+          <text
+            x="0"
+            y="0"
+            alignment-baseline="central"
+            dominant-baseline="central"
+            text-anchor="middle"
+          >
+            M
+          </text>
+        </g>
+              
     <svg x="0" y="0">
       <g transform="translate(0, 0)">
     <g class="stagger" style="animation-delay: 450ms" transform="translate(25, 0)">
