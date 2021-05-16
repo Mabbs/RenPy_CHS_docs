@@ -23,7 +23,7 @@
       animation: fadeInAnimation 0.3s ease-in-out forwards;
     }
     .rank-text {
-      font: 800 24px 'Segoe UI', Ubuntu, Sans-Serif; fill: #9f9f9f; 
+      font: 800 100px 'Segoe UI', Ubuntu, Sans-Serif; fill: #66ccff; 
       animation: scaleInAnimation 0.3s ease-in-out forwards;
     }
     
@@ -80,7 +80,7 @@
       >Mayx's Blog Article</text>
     </g>
       </g>
-    
+
         <g
           data-testid="main-card-body"
           transform="translate(0, 55)"
@@ -98,7 +98,8 @@
             M
           </text>
         </g>
-              
+      </g>
+
     <svg x="0" y="0">
       <g transform="translate(0, 0)">
     <g class="stagger" style="animation-delay: 450ms" transform="translate(25, 0)">
