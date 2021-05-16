@@ -16,6 +16,8 @@ tags: [links]
 | [云游君](https://www.yunyoujun.cn) | 希望能成为一个有趣的人。 |
 | [Angelic47's Home](https://www.angelic47.com/) | 依露娜・安琦四七・雪绪 - 能够战斗的公主姐姐 |
 | [探索子](https://beyondstars.xyz/) | 迈向未知·探索边界 |
+| [Kingfish404](https://blog.kingfish404.cn/) | Stay curious,stay naive. WUT. Jin Yu's Blog |
+
 
 ## Links申请
 请在下面留言或者直接发起[Pull request](https://github.com/Mabbs/mabbs.github.io/pull/new/master)   
