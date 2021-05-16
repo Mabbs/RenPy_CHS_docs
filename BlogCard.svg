@@ -1,3 +1,5 @@
+---
+---
 
       <svg
         width="495"
@@ -88,27 +90,32 @@
     <svg x="0" y="0">
       <g transform="translate(0, 0)">
     <g class="stagger" style="animation-delay: 450ms" transform="translate(25, 0)">
-  
+      <line x1="12" y1="6.25" x2="19" y2="6.25"
+style="stroke:rgb(255,255,255);stroke-width:2"/>
       <text class="stat bold" x="25" y="12.5">{{ site.posts[0].title }}</text>
     </g>
   </g><g transform="translate(0, 25)">
     <g class="stagger" style="animation-delay: 600ms" transform="translate(25, 0)">
-  
+      <line x1="12" y1="6.25" x2="19" y2="6.25"
+style="stroke:rgb(255,255,255);stroke-width:2"/>
       <text class="stat bold" x="25" y="12.5">{{ site.posts[1].title }}</text>
     </g>
   </g><g transform="translate(0, 50)">
     <g class="stagger" style="animation-delay: 750ms" transform="translate(25, 0)">
-  
+      <line x1="12" y1="6.25" x2="19" y2="6.25"
+style="stroke:rgb(255,255,255);stroke-width:2"/>
       <text class="stat bold" x="25" y="12.5">{{ site.posts[2].title }}</text>
     </g>
   </g><g transform="translate(0, 75)">
     <g class="stagger" style="animation-delay: 900ms" transform="translate(25, 0)">
-  
+      <line x1="12" y1="6.25" x2="19" y2="6.25"
+style="stroke:rgb(255,255,255);stroke-width:2"/>
       <text class="stat bold" x="25" y="12.5">{{ site.posts[3].title }}</text>
     </g>
   </g><g transform="translate(0, 100)">
     <g class="stagger" style="animation-delay: 1050ms" transform="translate(25, 0)">
-  
+      <line x1="12" y1="6.25" x2="19" y2="6.25"
+style="stroke:rgb(255,255,255);stroke-width:2"/>
       <text class="stat bold" x="25" y="12.5">{{ site.posts[4].title }}</text>
     </g>
   </g>
