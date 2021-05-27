@@ -15,7 +15,7 @@ tags: [Server, PHP]
 # 试着做一下
   我看了下微信关于测试号的接口文档，看起来也没多复杂嘛，我估摸了一下，最多一句话就能搞定！然后就试着用PHP写了一下。   
   最终的代码如下：
-```
+```php
 <?php
 $appid='appID';
 $secret='appsecret';
