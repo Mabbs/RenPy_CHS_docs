@@ -13,7 +13,7 @@ tags: [微信, 聊天, 机器人, PHP]
   没办法，我花了一天时间写的东西，我一定要水一篇文章！所以我想了想，干脆写成聊天机器人吧，那个东西也简单，像我博客上的伊斯特瓦尔就用了聊天机器人（有现成的API啥都好搞）。于是我稍微改动了一下代码，把发图机器人改成了聊天机器人。   
 
 # 代码
-```
+```php
 <?php
 $appid=微信appID;
 $secret=微信appsecret;
@@ -65,7 +65,7 @@ echo 'error';
   注册好机器人之后就直接把APIKey粘到代码里面，然后整个代码就可以正常运行了，现在你就可以和你的机器人聊天了。   
   
 # 暂时废弃的代码
-```
+```php
 define('MULTIPART_BOUNDARY', '--------------------------'.microtime(true));
 
 $file_contents = file_get_contents(json_decode(file_get_contents('https://www.pixiv.net/ajax/illust/'.json_decode(file_get_contents('https://api.loli.st/pixiv/'),true)['illust_id'].'/pages'),true)['body'][0]['urls']['regular'], false, stream_context_create(array('http' => array('method' => 'GET','header' => "referer: https://www.pixiv.net/"))));
