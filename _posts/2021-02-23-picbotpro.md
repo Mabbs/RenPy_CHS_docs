@@ -15,7 +15,7 @@ tags: [微信, 图片, Pixiv, 机器人, PHP]
   因为对于图片来说，基本上没有什么变化的信息，所以如果能将每一次的结果缓存的话其实也没有问题。所以说干就干，我单独开了一个仓库[pixiv-index](https://github.com/Mabbs/pixiv-index)用来存储缓存的结果，具体代码的话都在这个仓库里面，每天会调用那个API直到用完次数。   
   考虑到大多数情况下也不需要原图，所以这个API里的图片都只是长或宽最大为1200px的缩略图。   
   使用方法也很简单，像PHP的话就可以这样写：
-```
+```php
 <?php
 $raw=json_decode(file_get_contents("https://mabbs.github.io/pixiv-index/index.json"),true);
 echo file_get_contents('https://mabbs.github.io/pixiv-index/data/'.$raw[rand(0,count($raw)-1)]);
@@ -25,7 +25,7 @@ echo file_get_contents('https://mabbs.github.io/pixiv-index/data/'.$raw[rand(0,c
   
 # 新的代码
   解决了那些问题之后我又稍微优化了一下，把聊天机器人的功能剥离掉了，免得那个图灵机器人的API让人混乱。
-```
+```php
 <?php
 $appid='微信appID';
 $secret='微信appsecret';
