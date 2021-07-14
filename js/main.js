@@ -47,8 +47,9 @@ secondsold = Math.floor(timeold / 1000);
 e_daysold = timeold / (24 * 60 * 60 * 1000);
 daysold = Math.floor(e_daysold);
 if (daysold > 90) {
-    $("html")[0].style = "-webkit-filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(graysale=1);"
-    $("html")[0].innerHTML = $("html")[0].innerHTML.replace(/Mayx/g, "Ghost")
+    $("html")[0].style = "-webkit-filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(graysale=1);";
+    $("html")[0].innerHTML = $("html")[0].innerHTML.replace(/Mayx/g, "Ghost");
+    console.warn("Mayx may already be Dead");
 }
 
 var message_Path = '/Live2dHistoire/live2d/';
